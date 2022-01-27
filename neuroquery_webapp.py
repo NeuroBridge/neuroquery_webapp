@@ -20,7 +20,6 @@ from flask_cors import CORS
 import sys
 from timeit import default_timer as timer
 from neuroquery import fetch_neuroquery_model, NeuroQueryModel
-from nilearn.plotting import view_img
 import pandas
 
 # Define the app
@@ -52,5 +51,4 @@ def qa():
 
 if __name__ == '__main__':
     listenPort = app.config['SEARCH_PORT']
-    listenHost = app.config['SEARCH_IP']
-    app.run(debug=True, host=listenHost, port=listenPort)
+    app.run(debug=True, host="0.0.0.0", port=listenPort)
