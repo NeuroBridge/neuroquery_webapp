@@ -43,7 +43,7 @@ def qa():
 
         # we want to return the title and the pubmed_url
         for index,row in result["similar_documents"].iterrows():
-           records.append({'title': row['title'], 'pubmed_url': row['pubmed_url']})
+           records.append({'pmid': row['pmid'], 'title': row['title'], 'pubmed_url': row['pubmed_url'], 'similarity': row['similarity']})
 
     else:
         return {"error": "Couldn't process your request"}, 422
