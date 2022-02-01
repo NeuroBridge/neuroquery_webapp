@@ -51,4 +51,5 @@ def qa():
 
 if __name__ == '__main__':
     listenPort = app.config['SEARCH_PORT']
-    app.run(debug=True, host="0.0.0.0", port=listenPort)
+    from waitress import serve
+    serve (app, host="0.0.0.0", port=listenPort)
