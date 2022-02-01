@@ -3,3 +3,4 @@ flask_cors==3.0.10
 neuroquery==1.0.2
 nilearn==0.8.1
 pandas==1.0.1
+waitress==2.0.0
